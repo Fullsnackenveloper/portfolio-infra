@@ -2,6 +2,6 @@
     email mikeschermer310@gmail.com
 }
 
-whoami.msschermer.us {
-    reverse_proxy whoami:80
+psi.msschermer.us {
+    reverse_proxy psi-monitor:3000
 }

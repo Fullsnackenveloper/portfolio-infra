@@ -13,10 +13,14 @@ services:
     networks:
       - web
 
-  whoami:
-    image: traefik/whoami
-    container_name: whoami
+  psi-monitor:
+    image: ghcr.io/fullsnackenveloper/psi-monitor:latest
+    container_name: psi-monitor
     restart: unless-stopped
+    env_file:
+      - ./psi-monitor.env
+    volumes:
+      - psi_data:/app/data
     networks:
       - web
 
@@ -26,3 +30,4 @@ networks:
 volumes:
   caddy_data:
   caddy_config:
+  psi_data:
