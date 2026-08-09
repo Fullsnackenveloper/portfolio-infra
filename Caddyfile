@@ -1,0 +1,7 @@
+{
+    email mikeschermer310@gmail.com
+}
+
+whoami.msschermer.us {
+    reverse_proxy whoami:80
+}
