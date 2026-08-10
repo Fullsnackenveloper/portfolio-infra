@@ -11,6 +11,11 @@ psi.msschermer.us {
     reverse_proxy psi-monitor:3000
 }
 
+preflight.msschermer.us {
+    import origin_cert
+    reverse_proxy preflight:3000
+}
+
 bridge-demo.msschermer.us {
     import origin_cert
     reverse_proxy lead-inbox:3000
