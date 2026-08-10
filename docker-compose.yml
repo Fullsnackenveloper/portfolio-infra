@@ -24,7 +24,7 @@ services:
     networks:
       - web
 
-lead-inbox:
+  lead-inbox:
     image: ghcr.io/fullsnackenveloper/lead-inbox:latest
     container_name: lead-inbox
     restart: unless-stopped
