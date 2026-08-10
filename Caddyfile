@@ -2,9 +2,16 @@
     email mikeschermer310@gmail.com
 }
 
+(origin_cert) {
+    tls /etc/caddy/certs/origin.pem /etc/caddy/certs/origin.key
+}
+
 psi.msschermer.us {
+    import origin_cert
     reverse_proxy psi-monitor:3000
 }
+
 bridge-demo.msschermer.us {
+    import origin_cert
     reverse_proxy lead-inbox:3000
 }
