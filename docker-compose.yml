@@ -15,14 +15,14 @@ services:
       - web
 
   portfolio-hub:
-    image: ghcr.io/fullsnackenveloper/portfolio-hub:latest
+    image: ghcr.io/msschermer/portfolio-hub:latest
     container_name: portfolio-hub
     restart: unless-stopped
     networks:
       - web
 
   psi-monitor:
-    image: ghcr.io/fullsnackenveloper/psi-monitor:latest
+    image: ghcr.io/msschermer/psi-monitor:latest
     container_name: psi-monitor
     restart: unless-stopped
     env_file:
@@ -33,7 +33,7 @@ services:
       - web
 
   lead-inbox:
-    image: ghcr.io/fullsnackenveloper/lead-inbox:latest
+    image: ghcr.io/msschermer/lead-inbox:latest
     container_name: lead-inbox
     restart: unless-stopped
     networks:
