@@ -39,6 +39,13 @@ services:
     networks:
       - web
 
+  preflight:
+    image: ghcr.io/msschermer/preflight:latest
+    container_name: preflight
+    restart: unless-stopped
+    networks:
+      - web
+
 networks:
   web:
 
