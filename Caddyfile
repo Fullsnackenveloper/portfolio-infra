@@ -15,3 +15,8 @@ bridge-demo.msschermer.us {
     import origin_cert
     reverse_proxy lead-inbox:3000
 }
+
+msschermer.us, www.msschermer.us {
+    import origin_cert
+    reverse_proxy portfolio-hub:80
+}

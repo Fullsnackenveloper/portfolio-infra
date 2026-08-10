@@ -14,6 +14,13 @@ services:
     networks:
       - web
 
+  portfolio-hub:
+    image: ghcr.io/fullsnackenveloper/portfolio-hub:latest
+    container_name: portfolio-hub
+    restart: unless-stopped
+    networks:
+      - web
+
   psi-monitor:
     image: ghcr.io/fullsnackenveloper/psi-monitor:latest
     container_name: psi-monitor
