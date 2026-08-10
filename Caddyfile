@@ -5,3 +5,6 @@
 psi.msschermer.us {
     reverse_proxy psi-monitor:3000
 }
+bridge-demo.msschermer.us {
+    reverse_proxy lead-inbox:3000
+}
