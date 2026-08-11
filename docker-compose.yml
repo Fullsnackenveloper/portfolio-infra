@@ -31,6 +31,20 @@ services:
       - psi_data:/app/data
     networks:
       - web
+      
+  wcag-translator:
+    image: ghcr.io/msschermer/wcag-translator:latest
+    container_name: wcag-translator
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      CORS_ORIGIN: "*"
+      TRUST_PROXY: "1"
+      PUBLIC_RATE_LIMIT: "60"
+      API_RATE_LIMIT: "300"
+    networks:
+      - web
 
   lead-inbox:
     image: ghcr.io/msschermer/lead-inbox:latest

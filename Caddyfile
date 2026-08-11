@@ -25,3 +25,8 @@ msschermer.us, www.msschermer.us {
     import origin_cert
     reverse_proxy portfolio-hub:80
 }
+
+wcag-translator.msschermer.us {
+    import origin_cert
+    reverse_proxy wcag-translator:3000
+}
