@@ -30,3 +30,8 @@ wcag-translator.msschermer.us {
     import origin_cert
     reverse_proxy wcag-translator:3000
 }
+
+meta-state.msschermer.us {
+    import origin_cert
+    reverse_proxy meta-state-validator:3000
+}

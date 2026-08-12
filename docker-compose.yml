@@ -60,6 +60,16 @@ services:
     networks:
       - web
 
+  meta-state-validator:
+    image: ghcr.io/msschermer/meta-state-validator:latest
+    container_name: meta-state-validator
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+    networks:
+      - web
+
 networks:
   web:
 
